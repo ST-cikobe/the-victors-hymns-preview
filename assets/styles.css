@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.65;
+  color: #17202a;
+  background: #f5f7fa;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-width: 0; max-width: 100%; }
+body { overflow-wrap: anywhere; }
+main, .page-header { width: min(100% - 24px, 760px); margin-inline: auto; }
+.page-header { padding: 1rem 0 .25rem; }
+.page-header h1 { font-size: clamp(1.45rem, 6vw, 2rem); margin-bottom: 0; }
+.page-header p { margin-top: .25rem; color: #586575; }
+.search-panel, .song-card { background: #fff; border: 1px solid #dce2e9; border-radius: 12px; padding: 1rem; margin: 1rem 0; }
+.search-panel h2 { margin-top: 0; }
+input, select { font: inherit; max-width: 100%; }
+#query { display: block; width: 100%; margin-top: .35rem; padding: .65rem; border: 1px solid #8795a5; border-radius: 8px; }
+.control-row { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin-top: .8rem; }
+.control-row select { padding: .35rem; }
+#result-status { margin-bottom: 0; font-weight: 600; }
+.song-heading { display: flex; align-items: baseline; gap: .6rem; border-bottom: 1px solid #e4e8ed; }
+.song-number { color: #334e68; font-variant-numeric: tabular-nums; font-weight: 700; }
+.song-title { min-width: 0; margin: .1rem 0 .55rem; font-size: 1.25rem; }
+.song-meta { display: flex; flex-wrap: wrap; gap: .5rem 1rem; margin: .6rem 0; color: #52606d; font-size: .92rem; }
+.display-block { margin-top: .9rem; }
+.display-block h3 { margin: .35rem 0; font-size: 1rem; color: #334e68; }
+.song-line { max-width: 100%; margin: .55rem 0; }
+.chords { max-width: 100%; color: #7b341e; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; white-space: normal; overflow-wrap: anywhere; }
+.lyric { max-width: 100%; margin: 0; overflow-wrap: anywhere; }
+.note { margin: .25rem 0 0; color: #59636e; font-size: .9rem; }
+.note-label { font-weight: 700; }
+.no-results { padding: 1rem; text-align: center; }
+[hidden] { display: none !important; }
+
+@media (max-width: 420px) {
+  main, .page-header { width: min(100% - 16px, 760px); }
+  .search-panel, .song-card { padding: .8rem; }
+  .control-row { align-items: stretch; }
+  .control-row label { align-self: center; }
+}
