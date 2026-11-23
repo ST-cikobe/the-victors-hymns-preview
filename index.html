@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Victor’s Hymns fictional-data prototype">
+  <title>The Victor’s Hymns</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="page-header"><h1>The Victor’s Hymns</h1><p>架空データによる開発基盤デモ</p></header>
+  <main>
+    <section class="search-panel" aria-labelledby="search-heading">
+      <h2 id="search-heading">曲を検索</h2>
+      <label for="query">曲名・歌詞のキーワード</label>
+      <input id="query" type="search" autocomplete="off" placeholder="キーワードを入力">
+      <div class="control-row">
+        <label for="match-mode">複数語</label>
+        <select id="match-mode"><option value="and">AND</option><option value="or">OR</option></select>
+        <label for="capo-filter">カポ</label>
+        <select id="capo-filter"><option value="any">指定なし</option><option value="none">カポなし</option><option value="present">カポあり</option><option value="unconfirmed">未確認</option></select>
+        <label for="verse-filter">節数</label>
+        <select id="verse-filter"><option value="any">指定なし</option><option value="2">2節</option><option value="3">3節</option></select>
+      </div>
+      <p id="result-status" aria-live="polite">初期表示：5曲</p>
+      <noscript><p>JavaScriptは無効です。検索は利用できませんが、以下の曲一覧は閲覧できます。</p></noscript>
+    </section>
+    <section id="song-list" aria-label="曲一覧">
+      <article class="song-card" data-song-number="1" data-capo="none" data-verses="2"><header class="song-heading"><span class="song-number">01</span><h2 class="song-title">星の道</h2></header><p class="song-meta"><span>カポなし</span><span>2節</span></p><section class="display-block" aria-labelledby="block-01"><h3 id="block-01">01</h3><div class="song-line"><div class="chords" aria-label="コード">C / G</div><p class="lyric">明るい星が道を照らす</p><p class="note"><span class="note-label">注記：</span>架空の注記</p></div>
+<div class="song-line"><div class="chords" aria-label="コード">Am</div><p class="lyric">つよい光を胸に抱く</p></div></section></article>
+<article class="song-card" data-song-number="2" data-capo="present" data-verses="3"><header class="song-heading"><span class="song-number">02</span><h2 class="song-title">Blue Horizon</h2></header><p class="song-meta"><span>カポあり（2フレット）</span><span>3節</span></p><section class="display-block" aria-labelledby="block-02"><h3 id="block-02">02</h3><div class="song-line"><div class="chords" aria-label="コード">D</div><p class="lyric">Blue morning over the sea</p></div></section></article>
+<article class="song-card" data-song-number="4" data-capo="unconfirmed" data-verses=""><header class="song-heading"><span class="song-number">04</span><h2 class="song-title">架空の四番</h2></header><p class="song-meta"><span>カポ未確認</span><span>節数未確認</span></p><section class="display-block" aria-labelledby="block-04"><h3 id="block-04">04</h3><div class="song-line"><p class="lyric">架空の星がまた輝く</p></div></section></article>
+<article class="song-card" data-song-number="10" data-capo="none" data-verses=""><header class="song-heading"><span class="song-number">10</span><h2 class="song-title">Quiet River</h2></header><p class="song-meta"><span>カポなし</span><span>節数未確認</span></p><section class="display-block" aria-labelledby="block-10"><h3 id="block-10">10</h3><div class="song-line"><div class="chords" aria-label="コード">F</div><p class="lyric">Quiet water carries a dream</p></div></section></article>
+<article class="song-card" data-song-number="27" data-capo="unconfirmed" data-verses=""><header class="song-heading"><span class="song-number">27</span><h2 class="song-title">二つの空</h2></header><p class="song-meta"><span>カポ未確認</span><span>節数未確認</span></p><section class="display-block" aria-labelledby="block-27-1"><h3 id="block-27-1">27-1</h3><div class="song-line"><div class="chords" aria-label="コード">Em</div><p class="lyric">架空の第一ブロック</p></div></section>
+<section class="display-block" aria-labelledby="block-27-2"><h3 id="block-27-2">27-2</h3><div class="song-line"><div class="chords" aria-label="コード">G</div><p class="lyric">架空の第二ブロック</p></div></section></article>
+      <p id="no-results" class="no-results" hidden>条件に一致する曲はありません。</p>
+    </section>
+  </main>
+  <script src="assets/search-core.js" defer></script>
+  <script src="assets/search.js" defer></script>
+</body>
+</html>
